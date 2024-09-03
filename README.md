@@ -23,11 +23,7 @@ This is a movie recommender system that uses collaborative filtering, content-ba
 
 ### Backend (Python)
 
-1. Clone the repository:
-    ```bash
-    git clone https://github.com/yourusername/movie-recommender.git
-    cd movie-recommender
-    ```
+1. Dowload the folder
 
 2. Create a virtual environment and activate it:
     ```bash
