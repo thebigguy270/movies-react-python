@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: movie-recommender
+Version: 0.1
+Summary: A movie recommendation system using collaborative and content-based filtering
+Home-page: https://github.com/votreprofil/movie-recommender
+Author: Marc-Antoine Lussier
+Author-email: marcantoinelssr4@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Requires-Dist: Flask
+Requires-Dist: pandas
+Requires-Dist: scikit-learn
