@@ -1,5 +1,6 @@
 # app/api.py
 from flask import Flask, jsonify, request
+import pandas as pd
 from recommender.recommender import load_data
 from recommender.collaborative import create_user_item_matrix, calculate_similarity, get_recommendations as collaborative_recommendations
 from recommender.content_based import create_tfidf_matrix, calculate_similarity, get_recommendations as content_based_recommendations
@@ -11,7 +12,7 @@ processed_movies_path = 'data/processed/movies_processed.csv'
 ratings_path = 'data/raw/ratings.csv'
 
 # Charger les données prétraitées
-movies = load_data(processed_movies_path)
+movies = load_data(processed_movies_path, ratings_path)
 ratings = pd.read_csv(ratings_path)
 
 # Créer la matrice utilisateur-élément
