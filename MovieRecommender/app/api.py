@@ -1,10 +1,13 @@
 # app/api.py
+import sys
+import os
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from flask import Flask, jsonify, request
-import pandas as pd
 from recommender.recommender import load_data
 from recommender.collaborative import create_user_item_matrix, calculate_similarity, get_recommendations as collaborative_recommendations
 from recommender.content_based import create_tfidf_matrix, calculate_similarity, get_recommendations as content_based_recommendations
-
+import pandas as pd
 app = Flask(__name__)
 
 # Chemin vers le fichier CSV des films prétraités
